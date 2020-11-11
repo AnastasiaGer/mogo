@@ -242,10 +242,12 @@ top: -3px;
 left: 0;
 z-index: 1;
 }
+
 .slider__number{
   font-size: 24px;
   font-weight: 700;
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
+  margin-right: 5px;
 }
