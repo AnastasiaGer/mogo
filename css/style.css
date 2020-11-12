@@ -454,6 +454,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .devices {
@@ -472,4 +473,155 @@ body {
   bottom: -80px;
   right: 0;
   z-index: 1;
+}
+
+.wedo {
+  display: flex;
+}
+
+.wedo__item {
+  width: 50%;
+}
+
+.accordion__item {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.accordion__item.active .accordion__content {
+  display: block;
+}
+
+.accordion__item.active .accordion__header {
+  border-bottom-color: #e5e5e5;
+
+}
+
+.accordion__item.active .accordion__header:after {
+  background-image: url('../images/icons/arrow-down.svg');
+}
+
+.accordion__header {
+  border-bottom: 1px solid transparent;
+  padding: 15px 20px 15px 65px;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion__header:after {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 12px;
+  background-image: url('../images/icons/arrow-up.svg');
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.accordion__icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.accordion__title {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.accordion__content {
+  color: #999999;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: left;
+  padding: 15px 20px;
+
+  display: none;
+}
+
+.section--grey {
+  background-color: #f8f8f8;
+}
+
+.reviews {
+  padding: 0 110px;
+  position: relative;
+}
+
+.reviews__item {
+  padding-left: 205px;
+  position: relative;
+}
+
+.reviews__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reviews__text {
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+  color: #999999;
+  margin-bottom: 15px;
+}
+
+.reviews__name {
+  color: #333333;
+  font-family: 'Kaushan Script', cursive;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.reviews__name:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+
+}
+
+.reviews__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 0;
+  color: transparent;
+
+}
+
+.reviews__btn--prev {
+  content: '';
+  left: 0;
+  width: 12px;
+  height: 22px;
+  background-image: url('../images/icons/arrow-prev.svg');
+}
+
+.reviews__btn--next {
+  content: '';
+  right: 0;
+  width: 12px;
+  height: 22px;
+  background-image: url('../images/icons/arrow-next.svg');
 }
