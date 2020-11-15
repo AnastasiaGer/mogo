@@ -46,6 +46,11 @@ body {
   margin: 0;
 }
 
+/* Page */
+.page{
+  overflow: hidden;
+}
+
 
 /* Container */
 .container {
@@ -526,13 +531,13 @@ body {
   position: relative;
 }
 
-.devicas__item {
+.devices__item {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.devicas__item--iphone {
+.devices__item--iphone {
   position: absolute;
   bottom: -80px;
   right: 0;
@@ -650,6 +655,9 @@ body {
 }
 
 .reviews__photo {
+  display: block;
+  width: 210px;
+  height: 210px;
   position: absolute;
   top: 0;
   left: 0;
@@ -744,6 +752,17 @@ body {
 .logos {
   display: flex;
   justify-content: space-around;
+  margin: 0 -15px;
+}
+
+.logos__item {
+  padding: 0 15px;
+}
+
+.logos__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -856,7 +875,6 @@ body {
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
-  text-align: left;
   text-transform: uppercase;
 }
 
@@ -867,7 +885,6 @@ body {
   font-style: italic;
   letter-spacing: normal;
   line-height: 24px;
-  text-align: left;
 }
 
 .clients__text {
@@ -877,7 +894,6 @@ body {
   font-style: normal;
   letter-spacing: normal;
   line-height: 24px;
-  text-align: left;
 }
 
 .clients__text:before {
@@ -894,6 +910,7 @@ body {
 .blog {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .blog__item {
@@ -1038,6 +1055,12 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 65px;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.footer__col {
+  padding: 0 15px;
 }
 
 .footer__col--first {
@@ -1135,6 +1158,7 @@ body {
   display: flex;
   width: 100%;
   max-width: 380px;
+
 }
 
 .subscribe__input {
@@ -1233,12 +1257,14 @@ body {
 }
 
 .instagram__item {
-  width: 32.33333%;
+  width: 33%;
   border-bottom: 1px solid #ffffff;
 }
 
 .instagram__item img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -1275,6 +1301,11 @@ body {
 
   .intro__suptitle {
     font-size: 52px;
+  }
+
+  /* reviews */
+  .reviews__text {
+    font-size: 20px;
   }
 }
 
@@ -1320,6 +1351,59 @@ body {
   .services__item--border {
     border-bottom: none;
   }
+
+  /* reviews */
+  .reviews {
+    padding: 0 60px;
+  }
+
+  .reviews__item {
+    padding-left: 175px;
+  }
+
+  .reviews__photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* clients */
+  .clients {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .clients__item {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .clients__item:last-child {
+    margin-bottom: 0;
+  }
+
+
+  /* footer */
+  .footer__col--first {
+    width: 100%;
+  }
+
+  .footer__col--second {
+    width: 50%;
+  }
+
+  .footer__col--third {
+    width: 50%;
+  }
+
+  /* instagram */
+  .instagram {
+    justify-content: flex-start;
+  }
+
+  .instagram__item {
+    width: auto;
+    border-right: 1px solid #ffffff;
+  }
 }
 
 
@@ -1354,8 +1438,6 @@ body {
   .section--devices {
     padding-bottom: 0;
   }
-
-
 
   /* card */
   .card {
@@ -1395,11 +1477,62 @@ body {
   .wedo__item {
     width: 100%;
   }
+
   .wedo__image {
     display: none;
   }
 
+  /* reviews */
+  .reviews__item {
+    padding-left: 0;
+  }
 
+  .reviews__photo {
+    position: static;
+    margin: 0 auto 20px;
+  }
+
+  .reviews__text {
+    font-size: 16px;
+  }
+
+  .reviews__name {
+    font-size: 20px;
+  }
+
+  /* works */
+  .works {
+    flex-wrap: wrap;
+  }
+
+  .works__col {
+    flex: none;
+    width: 50%;
+  }
+
+  /* blog */
+  .blog {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .blog__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .blog__item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* footer */
+  .footer__col--second {
+    width: 100%;
+  }
+
+  .footer__col--third {
+    width: 100%;
+  }
 }
 
 
@@ -1456,9 +1589,69 @@ body {
     max-width: 320px;
   }
 
-  .devicas__item--iphone {
+  .devices__item--iphone {
     max-width: 180px;
     bottom: -50px;
     right: -80px;
+  }
+
+  /* reviews */
+  .reviews {
+    padding: 0;
+  }
+
+  .reviews__btn {
+    top: 18%;
+  }
+
+
+  /* logos */
+  .logos {
+    flex-wrap: wrap;
+  }
+
+  /* works */
+  .works__col {
+    width: 100%;
+  }
+
+  /* clients */
+  .clients__photo {
+    position: static;
+  }
+
+  .clients__item {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .clients__text:before {
+    margin: 15px auto;
+  }
+
+  /* subscribe */
+  .subscribe {
+    flex-wrap: wrap;
+    max-width: none;
+  }
+
+  .subscribe__input {
+    width: 100%;
+    border-right: 1px solid #e7e7e7;
+    margin-bottom: 10px;
+  }
+
+  .subscribe__btn {
+    width: 100%;
+  }
+
+  /* blogs__item */
+  .blogs__img {
+    width: 80px;
+    height: 50px;
+  
+  }
+  .blogs__title{
+    font-size: 10px;
   }
 }
