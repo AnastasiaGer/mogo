@@ -136,7 +136,7 @@ body {
   right: 0;
   left: 0;
   transform: translate3d(0, 0, 0);
-  padding-top: 10px;
+  padding: 10px 0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
 }
 
@@ -159,6 +159,7 @@ body {
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
+  cursor: pointer;
 }
 
 
@@ -236,6 +237,10 @@ body {
   display: none;
 }
 
+.nav-toggle:focus {
+  outline: none;
+}
+
 .nav-toggle__item {
   display: block;
   width: 100%;
@@ -252,7 +257,7 @@ body {
   transition: background .2s linear;
 }
 
-.nav-toggle.active .nav-toggle__item{
+.nav-toggle.active .nav-toggle__item {
   background: none;
 }
 
@@ -277,13 +282,13 @@ body {
   bottom: -8px;
 }
 
-.nav-toggle.active .nav-toggle__item:before{
+.nav-toggle.active .nav-toggle__item:before {
   transform-origin: left top;
   transform: rotate(45deg) translate3d(-2px, -8px, 0px);
 }
 
 
-.nav-toggle.active .nav-toggle__item:after{
+.nav-toggle.active .nav-toggle__item:after {
   transform-origin: left bottom;
   transform: rotate(-45deg) translate3d(5px, 0px, 0px);
 }
@@ -738,13 +743,18 @@ body {
 
 /* reviews */
 .reviews {
-  padding: 0 110px;
   position: relative;
 }
 
+.reviews .slick-slider{
+  padding: 0 110px;
+}
+
 .reviews__item {
+  min-height: 210px;
   padding-left: 235px;
   position: relative;
+
 }
 
 .reviews__photo {
@@ -784,7 +794,7 @@ body {
 
 }
 
-.reviews__btn {
+.slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -792,9 +802,16 @@ body {
   font-size: 0;
   color: transparent;
 
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.reviews__btn--prev {
+.slick-arrow:focus {
+  outline: none;
+}
+
+.slick-prev {
   content: '';
   left: 0;
   width: 12px;
@@ -802,7 +819,7 @@ body {
   background-image: url('../images/icons/arrow-prev.svg');
 }
 
-.reviews__btn--next {
+.slick-next {
   content: '';
   right: 0;
   width: 12px;
@@ -1446,7 +1463,7 @@ body {
   }
 
   /* reviews */
-  .reviews {
+  .reviews .slick-slider {
     padding: 0 60px;
   }
 
@@ -1523,6 +1540,10 @@ body {
     top: 100%;
     left: 0;
     background-color: #eb8b8d;
+  }
+
+  .nav.active {
+    display: block;
   }
 
   .nav__list {
@@ -1718,11 +1739,11 @@ body {
   }
 
   /* reviews */
-  .reviews {
+  .reviews .slick-slider{
     padding: 0;
   }
 
-  .reviews__btn {
+  .slick-arrow {
     top: 18%;
   }
 
